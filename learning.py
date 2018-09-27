@@ -61,4 +61,5 @@ for name in facets['name']['buckets']:
                     docs.append(doc)
                     if len(docs) >= 1000:
                       helpers.bulk(es,docs)
+                      docs = []
         helpers.bulk(es,docs)
